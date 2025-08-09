@@ -30,7 +30,7 @@ $overlay_markup = get_block_core_post_featured_image_overlay_element_markup( $at
 
 if ( $is_link ) {
 	$term_name = $taxonomy_term->name;
-	if ( $title ) {
+	if ( $term_name ) {
 		$attr['alt'] = esc_attr( $term_name );
 	} else {
 		$attr['alt'] = sprintf(
