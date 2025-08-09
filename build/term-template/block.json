@@ -1,0 +1,77 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "visual-taxonomy-block/term-template",
+  "version": "0.1.0",
+  "title": "Term template",
+  "category": "taxonomies",
+  "icon": "layout",
+  "ancestor": [
+    "visual-taxonomy-block/terms-loop"
+  ],
+  "keywords": [
+    "term template",
+    "taxonomy",
+    "terms",
+    "taxonomies"
+  ],
+  "description": "Contains the block elements used to render a term, like the title, image, count, description, and more...",
+  "textdomain": "visual-taxonomy-block",
+  "usesContext": [
+    "taxonomyName",
+    "itemsPerPage",
+    "hideEmpty"
+  ],
+  "supports": {
+    "reusable": false,
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "layout": true,
+    "color": {
+      "gradients": true,
+      "link": true,
+      "__experimentalDefaultControls": {
+        "background": true,
+        "text": true
+      }
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontStyle": true,
+      "__experimentalTextTransform": true,
+      "__experimentalTextDecoration": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": {
+        "__experimentalDefault": "1.25em"
+      },
+      "__experimentalDefaultControls": {
+        "blockGap": true,
+        "padding": false,
+        "margin": false
+      }
+    },
+    "__experimentalBorder": {
+      "radius": true,
+      "color": true,
+      "width": true,
+      "style": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

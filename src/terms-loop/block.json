@@ -1,0 +1,80 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "visual-taxonomy-block/terms-loop",
+	"version": "0.1.0",
+	"title": "Terms Loop",
+	"category": "taxonomies",
+	"icon": "category",
+	"keywords": ["categories", "terms", "taxonomies", "taxonomy"],
+	"description": "An advanced block that allows displaying terms based on a selected taxonomy and visual configurations",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"color": {
+			"enableContrastChecker": false,
+			"background": true,
+			"gradients": true,
+			"text": true,
+			"__experimentalDefaultControls": {
+				"text": true,
+				"background": true
+			}
+		},
+		"spacing": {
+			"blockGap": ["horizontal", "vertical"],
+			"margin": true,
+			"padding": true,
+			"units": ["px", "em", "rem", "vh", "vw"],
+			"__experimentalDefaultControls": {
+				"blockGap": true,
+				"margin": false,
+				"padding": true
+			}
+		},
+		"__experimentalBorder": {
+			"radius": true,
+			"color": true,
+			"width": true,
+			"style": true,
+			"__experimentalDefaultControls": {
+				"radius": true,
+				"color": true,
+				"width": true,
+				"style": true
+			}
+		}
+	},
+	"attributes": {
+		"taxonomyName": {
+			"type": "string"
+		},
+		"itemsPerPage": {
+			"type": "number"
+		},
+		"hideEmpty": {
+			"type": "boolean",
+			"default": true
+		},
+		"orderby": {
+			"type": "string",
+			"default": "count"
+		},
+		"order": {
+			"type": "string",
+			"default": "DESC"
+		}
+	},
+	"providesContext": {
+		"taxonomyName": "taxonomyName",
+		"itemsPerPage": "itemsPerPage",
+		"hideEmpty": "hideEmpty",
+		"orderby": "orderby",
+		"order": "order"
+	},
+	"textdomain": "visual-taxonomy-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,107 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "visual-taxonomy-block/term-image",
+	"title": "Term Image",
+	"category": "taxonomies",
+	"description": "Display a term's featured image.",
+	"textdomain": "visual-taxonomy-block",
+	"ancestor": ["visual-taxonomy-block/terms-loop"],
+	"usesContext": ["termId", "taxonomyName"],
+	"attributes": {
+		"isLink": {
+			"type": "boolean",
+			"default": false,
+			"role": "content"
+		},
+		"aspectRatio": {
+			"type": "string"
+		},
+		"width": {
+			"type": "string"
+		},
+		"height": {
+			"type": "string"
+		},
+		"scale": {
+			"type": "string",
+			"default": "cover"
+		},
+		"sizeSlug": {
+			"type": "string"
+		},
+		"rel": {
+			"type": "string",
+			"attribute": "rel",
+			"default": "",
+			"role": "content"
+		},
+		"linkTarget": {
+			"type": "string",
+			"default": "_self",
+			"role": "content"
+		},
+		"overlayColor": {
+			"type": "string"
+		},
+		"customOverlayColor": {
+			"type": "string"
+		},
+		"dimRatio": {
+			"type": "number",
+			"default": 0
+		},
+		"gradient": {
+			"type": "string"
+		},
+		"customGradient": {
+			"type": "string"
+		}
+	},
+	"example": {
+		"viewportWidth": 350
+	},
+	"supports": {
+		"align": ["left", "right", "center", "wide", "full"],
+		"color": {
+			"text": false,
+			"background": false
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"width": true,
+			"__experimentalSkipSerialization": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"width": true
+			}
+		},
+		"filter": {
+			"duotone": true
+		},
+		"shadow": {
+			"__experimentalSkipSerialization": true
+		},
+		"html": false,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"interactivity": {
+			"clientNavigation": true
+		}
+	},
+	"selectors": {
+		"border": ".wp-block-visual-taxonomy-block-term-image img, .wp-block-visual-taxonomy-block-term-image .block-editor-media-placeholder, .wp-block-visual-taxonomy-block-term-image .wp-block-visual-taxonomy-block-term-image__overlay",
+		"shadow": ".wp-block-visual-taxonomy-block-term-image img, .wp-block-visual-taxonomy-block-term-image .components-placeholder",
+		"filter": {
+			"duotone": ".wp-block-visual-taxonomy-block-term-image img, .wp-block-visual-taxonomy-block-term-image .wp-block-visual-taxonomy-block-term-image__placeholder, .wp-block-visual-taxonomy-block-term-image .components-placeholder__illustration, .wp-block-visual-taxonomy-block-term-image .components-placeholder::before"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
