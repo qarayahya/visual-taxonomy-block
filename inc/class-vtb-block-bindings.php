@@ -116,7 +116,19 @@ class VTB_Block_Bindings {
 		$term_id = $this->get_term_id_from_context( $block_instance );
 		$term    = $this->get_validated_term( $term_id );
 
-		return $term ? (string) $term->count : '';
+		if ( ! $term ) {
+			return '';
+		}
+
+		if ( isset( $source_args['label'] ) ) {
+			return sprintf(
+				'%1$s <span class="term-count__label">%2$s</span>',
+				$term->count,
+				$source_args['label'],
+			);
+		}
+
+		return (string) $term->count;
 	}
 
 	/**
