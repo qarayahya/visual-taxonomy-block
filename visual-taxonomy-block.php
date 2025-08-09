@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Visual Taxonomy Block
- * Description:       Example block scaffolded with Create Block tool.
+ * Description:       Add images to taxonomies and display them with custom Gutenberg blocks.
  * Version:           0.1.0
  * Requires at least: 6.7
  * Requires PHP:      7.4
